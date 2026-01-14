@@ -4,210 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electrical Engineering Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background: #0f0f1e;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid #667eea;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .resume-btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.75rem 1.75rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 30px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .resume-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-
-        nav {
-            background: #1a1a2e;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #2a2a3e;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #a0a0ff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #667eea;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            background: #1a1a2e;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            border: 1px solid #2a2a3e;
-        }
-
-        h2 {
-            color: #8b9bff;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            border: 1px solid #2a2a3e;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: #16213e;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
-            border-color: #667eea;
-        }
-
-        .project-card h3 {
-            color: #a0a0ff;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            color: #b0b0b0;
-            margin-bottom: 1rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: #16213e;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .skill-category h3 {
-            color: #8b9bff;
-            margin-bottom: 1rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            padding: 0.5rem 0;
-            color: #b0b0b0;
-        }
-
-        .skill-category li:before {
-            content: "▹ ";
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-item {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .contact-item strong {
-            color: #8b9bff;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background: #0a0a14;
-            color: #b0b0b0;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            border-top: 2px solid #667eea;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -240,23 +37,33 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
-                    <h3>Syringe Pump Control System</h3>
-                    <p>Designed and built a microcontroller-controlled syringe pump for precise fluid delivery, integrating stepper motor control and adjustable flow rates.</p>
-                    <p><strong>Technologies:</strong> Arduino, Stepper Motors, Embedded C, Power Electronics</p>
-                </div>
+                <a class="project-link" href="projects/syringe_pump.html">
+                    <div class="project-card">
+                        <h3>Syringe Pump Control System</h3>
+                        <p>Designed and built a microcontroller-controlled syringe pump for precise fluid delivery, integrating stepper motor control and adjustable flow rates.</p>
+                        <p><strong>Technologies:</strong> Arduino, Stepper Motors, Embedded C, Power Electronics</p>
+                    </div>
+                </a>
 
-                <div class="project-card">
-                    <h3>Radiation Effects Test System</h3>
-                    <p>Developed Python tools and embedded hardware interfaces to support radiation testing of electronic components using ion beam facilities.</p>
-                    <p><strong>Technologies:</strong> Python, Microcontrollers, PCB Design, Test Automation</p>
-                </div>
+                <a class="project-link" href="projects/isde_radiation_emulation.html">
+                    <div class="project-card">
+                        <h3>Radiation-Effects Emulation Platform</h3>
+                        <p>Designed an ESP32-based hardware platform to emulate radiation-induced behavior in an electronic component using controlled analog stimulus and measurement.</p>
+                        <p><strong>Technologies:</strong> ESP32, DAC/ADC, Voltage Level Shifting, PCB Design, Python Automation</p>
+                    </div>
+                    </a>
 
-                <div class="project-card">
-                    <h3>Digital Logic & Verification Projects</h3>
-                    <p>Implemented and tested digital logic designs including finite state machines and verification testbenches as part of advanced ECE coursework.</p>
-                    <p><strong>Technologies:</strong> Verilog, Simulation, Timing Analysis</p>
-                </div>
+                <a class="project-link" href="projects/autonomous_maze_solving_robot.html">
+                    <div class="project-card">
+                <h3>Autonomous Maze-Solving Robot</h3>
+                    <p>
+                    Designed and programmed an autonomous robot to navigate and solve a maze using real-time sensor feedback and embedded control algorithms.
+                    </p>
+                    <p>
+                    <strong>Technologies:</strong> Microcontroller, Motor Drivers, Sensors, Embedded C/C++, Control Logic
+                    </p>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -325,7 +132,7 @@
                 </div>
                 <div class="contact-item">
                     <strong>GitHub:</strong>
-                    <p><a href="https://https://github.com/Crzisaac" target="_blank">github.com/crzisaac</a></p>
+                    <p><a href="https://github.com/Crzisaac" target="_blank">github.com/crzisaac</a></p>
                 </div>
             </div>
         </section>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radiation-Effects Emulation Platform | Isaac Miguel Giraldo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section>
+      <h2>Radiation-Effects Emulation Platform</h2>
+
+      <p><strong>Context:</strong> Institute of Space and Defense Electronics (ISDE) — Summer 2024</p>
+
+      <h3>What it is</h3>
+      <p>
+        A custom ESP32-based hardware emulation platform designed to reproduce radiation-induced behavior in a target electronic component.
+        The system generates controlled analog stimulus and monitors the device response, enabling repeatable lab testing without requiring live irradiation.
+      </p>
+
+      <h3>Problem</h3>
+      <ul>
+        <li>Radiation can cause transient or persistent changes in circuit behavior, which are hard to reproduce consistently.</li>
+        <li>Beam time is limited/expensive; we needed a way to test behaviors in the lab without relying on live irradiation for every iteration.</li>
+        <li>The emulation needed to be controlled, measurable, and safe for the device under test.</li>
+      </ul>
+
+      <h3>My contributions</h3>
+      <ul>
+        <li>Designed a custom PCB integrating an ESP32, DAC, ADC, and voltage level-shifting circuitry to safely interface with the device under test.</li>
+        <li>Developed ESP32 firmware to generate programmable analog stimulus profiles and coordinate synchronized measurements.</li>
+        <li>Implemented ADC-based monitoring to capture device response and characterize behavior under emulated fault conditions.</li>
+        <li>Built a Python-based control and logging workflow to automate test runs and collect repeatable data.</li>
+      </ul>
+
+      <h3>Technical details</h3>
+      <ul>
+        <li><strong>Controller:</strong> ESP32 managing timing, control logic, and communication.</li>
+        <li><strong>Stimulus generation:</strong> DAC used to produce controlled analog voltage profiles representing radiation-induced effects.</li>
+        <li><strong>Measurement:</strong> ADC used to monitor the response of the device under test in real time.</li>
+        <li><strong>Interface:</strong> Voltage level-shifting circuitry to match signal ranges and protect both the ESP32 and the target component.</li>
+        <li><strong>Automation:</strong> Python scripts for parameter sweeps, data logging, and repeatable test execution.</li>
+      </ul>
+
+      <h3>Results</h3>
+      <ul>
+        <li>Enabled repeatable emulation of radiation-induced behavior under controlled conditions.</li>
+        <li>Reduced dependency on live beam testing by supporting rapid bench-level iteration.</li>
+        <li>Improved test consistency through automated stimulus generation and data capture.</li>
+      </ul>
+
+      <h3>What I’d improve next</h3>
+      <ul>
+        <li>Add calibration routines to compensate for DAC/ADC non-idealities and temperature drift.</li>
+        <li>Increase timing resolution for finer-grained transient emulation.</li>
+        <li>Expand the emulator to support multiple fault profiles and parameterized waveforms.</li>
+      </ul>
+
+    </section>
+  </div>
+</body>
+</html>
